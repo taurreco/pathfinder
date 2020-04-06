@@ -5,4 +5,4 @@ Controls:
 -Drag 'W' to create walls
 -Left mouse click to create a source node
 -Right mouse click to create a target node
--Enter run the pathfinder
+-Enter to run the pathfinder

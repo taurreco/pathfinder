@@ -52,12 +52,12 @@ def draw_screen(source, target, walls, path, visited):
             # If the node is visited
             if node in visited:
                 pygame.draw.rect(screen, BLUE, rect)
-            # If the node is either the source or target
-            if source == node or target == node:
-                pygame.draw.rect(screen, YELLOW, rect)
             # If the node is in the path
             if node in path:
                 pygame.draw.rect(screen, GREEN, rect)
+            # If the node is either the source or target
+            if source == node or target == node:
+                pygame.draw.rect(screen, YELLOW, rect)
 
     pygame.display.update()
 
@@ -160,7 +160,7 @@ class Graph(object):
         path = []
         infinity = float('inf')
         # A boolean that determines whether the visited nodes are updated in real time or not
-        visualize = True
+        visualize = False
 
         # Set the dist, and prev values for each node with the default values
         # Add every node to unvisited

@@ -115,13 +115,11 @@ class Graph(object):
 
     def __init__(self, nodes={}, walls=[]):
         """Here the Graph can be initialized with the nodes and the walls, or left empty"""
-
         self.nodes = nodes
         self.walls = walls
 
     def add_wall(self, wall_node):
         """This method allows additions to the list of walls after initialization of the Graph"""
-
         self.walls.append(wall_node)
 
     def find_shortest_path(self, source, target):
@@ -150,8 +148,7 @@ class Graph(object):
                     path (list of Node): The nodes within the shortest path
                         between the source and target node.
 
-            """
-
+        """
         # Initialize variables used in the algorithm
         dist = {}
         prev = {}
@@ -221,7 +218,6 @@ class Graph(object):
                         between the source and target node.
 
         """
-
         path = [target]  # Target is the first node added to the path
         while prev[target] is not None:  # So long as target is not the source
             # (source is the only node which should not have a value for prev)
@@ -246,7 +242,6 @@ class Game:
 
     def run(self):
         """This method handles the user events and draws the screen until the user closes the window."""
-
         # Initialize variables
         graph = Graph(self.generate_nodes()) # Create the graph
         source = None
@@ -289,6 +284,7 @@ class Game:
             Returns:
                 nodes (dict of Node: list of Node): This is a structure used
                     to represent every node in the graph.
+                    
         """
         # Initializing the variables used to check for and return the nodes dict
         w, h = pygame.display.get_surface().get_size()
@@ -313,6 +309,7 @@ class Game:
             Returns:
                 neighbors (list of Node): The list of neighbor
                     nodes which become the values in a dict of nodes.
+                    
         """
         # Initializing the variables used to check for and return neighbors
         x, y = node.pos
